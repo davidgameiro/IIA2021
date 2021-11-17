@@ -1,2 +1,2 @@
 # IIA2021
-repositori ode Informatica Industrial Aplicada
+repositorio de Informatica Industrial Aplicada
