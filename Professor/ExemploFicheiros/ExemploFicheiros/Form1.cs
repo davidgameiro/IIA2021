@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,9 +88,10 @@ namespace ExemploFicheiros
             {
                 return;
             }
-
-            System.IO.File.WriteAllText(tmpFicheiro, rbFicheiro.Text);
-
+            string LinhaAInserir="DateTime.Now \t OEE \t CiclosOK \t CiclosNOK\n";//contem o Data \t OEE \t \NCiclosOK \t NCiclosNOK\n
+            StreamWriter fileStream = new StreamWriter(tmpFicheiro, true, Encoding.UTF8);
+            fileStream.Write(LinhaAInserir);
+            //System.IO.File.AppendText(LinhaAInserir);//serve para adicionar novas linhas no final do ficheiro
         }
     }
 }
